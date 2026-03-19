@@ -1,6 +1,7 @@
 # Organograma do Sistema
 ---
-![alt text](DUC_01_GustavoPomeranziLedesma_VitorHenriqueDaSilva.png)
+<img width="505" height="1847" alt="image" src="https://github.com/user-attachments/assets/977c9e7d-5384-453b-84af-6e57caf2c056" />
+
 
 ---
 
@@ -29,6 +30,9 @@ Permitir que o usuário acesse o sistema com seu perfil específico.
 ### RN Relacionadas
 - RN06
 
+<img width="594" height="305" alt="image" src="https://github.com/user-attachments/assets/bd0add32-3de9-4f44-98a3-e19a32eb9647" />
+
+
 ---
 
 ## UC02 — Cadastrar Novo Aluno
@@ -52,6 +56,9 @@ Registrar um novo aluno no sistema.
 - RNF02, RNF04
 ### RN Relacionadas
 - RN06
+
+<img width="594" height="268" alt="image" src="https://github.com/user-attachments/assets/247492c7-3df4-4300-8a8b-66ec193bb656" />
+
 
 ---
 
@@ -77,6 +84,9 @@ Criar e configurar modalidades de planos oferecidos pela academia.
 ### RN Relacionadas
 - RN06
 
+<img width="594" height="235" alt="image" src="https://github.com/user-attachments/assets/7f3b72c4-698c-4320-b89c-aaedabd92585" />
+
+
 ---
 
 ## UC04 — Editar Plano Existente
@@ -100,6 +110,9 @@ Alterar informações de preço, duração ou modalidades de um plano.
 - RNF04
 ### RN Relacionadas
 - RN06
+
+<img width="573" height="536" alt="image" src="https://github.com/user-attachments/assets/6c3a304b-91f9-400d-ae33-b391bb40d840" />
+
 
 ---
 
@@ -126,6 +139,9 @@ Dar baixa na mensalidade ou débitos de um aluno presencialmente.
 ### RN Relacionadas
 - RN04, RN06, RN07
 
+<img width="594" height="287" alt="image" src="https://github.com/user-attachments/assets/fb624cad-2edc-4d47-b975-c0e816841323" />
+
+
 ---
 
 ## UC06 — Gerar Pagamento Online (Boleto/PIX)
@@ -150,6 +166,9 @@ Permitir que o aluno pague a mensalidade sem ir à recepção.
 ### RN Relacionadas
 - RN04
 
+<img width="594" height="211" alt="image" src="https://github.com/user-attachments/assets/bf9b5481-1d22-4988-bc04-8a6306a65d91" />
+
+
 ---
 
 ## UC07 — Validar Regularidade do Aluno
@@ -172,6 +191,9 @@ Checar automaticamente se o aluno está elegível para acesso às dependências.
 - RNF01, RNF03
 ### RN Relacionadas
 - RN01, RN07
+
+<img width="472" height="295" alt="image" src="https://github.com/user-attachments/assets/eaebf11f-0525-4b57-aef9-88bf0ac93af2" />
+
 
 ---
 
@@ -198,6 +220,9 @@ Validar via RFID se o aluno pode entrar na academia.
 ### RN Relacionadas
 - RN01
 
+<img width="594" height="318" alt="image" src="https://github.com/user-attachments/assets/ffd5b8fb-11d5-4134-82a1-aff6a4057535" />
+
+
 ---
 
 ## UC09 — Visualizar Horários de Aulas
@@ -220,6 +245,9 @@ Permitir ao aluno checar a grade de aulas disponíveis.
 - RNF04
 ### RN Relacionadas
 - N/A
+
+<img width="469" height="317" alt="image" src="https://github.com/user-attachments/assets/d567f7bf-1bb2-49e5-aab3-5c5736abf8b1" />
+
 
 ---
 
@@ -245,6 +273,9 @@ Garantir uma vaga em aula específica.
 ### RN Relacionadas
 - RN02
 
+<img width="594" height="261" alt="image" src="https://github.com/user-attachments/assets/6b79d4e9-1529-4393-a82b-9b62f9b3d131" />
+
+
 ---
 
 ## UC11 — Cancelar Agendamento de Aula
@@ -269,6 +300,9 @@ Liberar a vaga previamente agendada caso o aluno não possa comparecer.
 ### RN Relacionadas
 - RN03
 
+<img width="594" height="403" alt="image" src="https://github.com/user-attachments/assets/7bc85e45-781b-4d48-b352-65dbf5aff310" />
+
+
 ---
 
 ## UC12 — Registrar Presença em Aula
@@ -292,6 +326,9 @@ Validar quais alunos da lista efetivamente compareceram à aula.
 - RNF04
 ### RN Relacionadas
 - RN06
+
+<img width="594" height="339" alt="image" src="https://github.com/user-attachments/assets/0e5c284e-65f6-44ce-8eac-aca052b6546c" />
+
 
 ---
 
@@ -318,6 +355,9 @@ Salvar laudos e medições para o histórico do aluno.
 ### RN Relacionadas
 - RN05, RN06
 
+<img width="594" height="230" alt="image" src="https://github.com/user-attachments/assets/e6d428cd-3442-45f0-b775-535d97fea4c2" />
+
+
 ---
 
 ## UC14 — Visualizar Avaliação Física
@@ -341,6 +381,9 @@ Consultar a própria avaliação física registrada pelo instrutor.
 - RNF02, RNF04
 ### RN Relacionadas
 - N/A
+
+<img width="594" height="339" alt="image" src="https://github.com/user-attachments/assets/7c895796-705c-41de-99eb-175babd2a8a9" />
+
 
 ---
 
@@ -366,6 +409,9 @@ Visualizar a quantidade e as informações dos alunos com mensalidade atrasada.
 ### RN Relacionadas
 - RN06
 
+<img width="594" height="329" alt="image" src="https://github.com/user-attachments/assets/0f476dce-a407-48d0-9511-427049c69dca" />
+
+
 ---
 
 ## UC16 — Emitir Relatório de Alunos Ativos
@@ -389,6 +435,9 @@ Levantar toda a base de matriculados que possuem pagamentos em dia.
 - RNF04, RNF05
 ### RN Relacionadas
 - RN06
+
+<img width="594" height="372" alt="image" src="https://github.com/user-attachments/assets/4fa84e82-2ce0-4450-982c-4fe82d883ec3" />
+
 
 ---
 
@@ -414,6 +463,9 @@ Analisar as aulas que mais atraem público e o nível de taxa de presença.
 ### RN Relacionadas
 - RN06
 
+<img width="594" height="315" alt="image" src="https://github.com/user-attachments/assets/d0676222-42a8-4ac7-a14b-4cc9dbbc49ba" />
+
+
 ---
 
 ## UC18 — Enviar Notificação de Vencimento
@@ -437,6 +489,9 @@ Avisar o aluno da proximidade ou atraso da sua mensalidade por push/e-mail.
 - RNF01
 ### RN Relacionadas
 - N/A
+
+<img width="551" height="405" alt="image" src="https://github.com/user-attachments/assets/ce7d823a-f3ff-456e-bd79-50da861e0c72" />
+
 
 ---
 
@@ -463,6 +518,9 @@ Configurar informações, atualizando mudança de endereço, telefone ou e-mail.
 ### RN Relacionadas
 - RN06
 
+<img width="594" height="324" alt="image" src="https://github.com/user-attachments/assets/05cd00ca-bac2-4c5d-8c11-d85b924a74c6" />
+
+
 ---
 
 ## UC20 — Consultar Histórico de Acessos
@@ -486,3 +544,5 @@ Visualizar a tabela de logs de fluxo da catraca (entradas reais).
 - RNF05, RNF06
 ### RN Relacionadas
 - RN06
+
+<img width="594" height="371" alt="image" src="https://github.com/user-attachments/assets/83c07a0e-a848-4b4f-b416-6ae10976922e" />
