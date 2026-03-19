@@ -55,7 +55,6 @@
 **RNF:** RNF02  
 
 ### Diagrama de Atividade
-```plantuml
 @startuml
 start
 :Usuário informa e-mail e senha;
