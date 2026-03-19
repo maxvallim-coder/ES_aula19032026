@@ -1,6 +1,8 @@
 # Estudo de Caso - FitPass Gym Management
 Autores: Igor Paiva e Fabio Bragagnolo
 
+<img width="588" height="512" alt="image" src="https://github.com/user-attachments/assets/22510559-5168-4a37-b7ec-62a099211613" />
+
 ---
 
 ## UC01 — Realizar Login
