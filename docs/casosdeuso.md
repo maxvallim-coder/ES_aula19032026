@@ -425,6 +425,9 @@ Notificar aluno.
 
 ## UC13 — Atualizar Cadastro
 
+<img width="674" height="456" alt="image" src="https://github.com/user-attachments/assets/72b9612e-9809-47ca-8fe0-0725418c3d36" />
+
+
 ### Ator Principal
 Aluno
 
