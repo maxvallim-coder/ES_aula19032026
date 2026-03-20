@@ -539,6 +539,9 @@ Gerar cobrança.
 
 ## UC16 — Consultar Histórico
 
+<img width="486" height="450" alt="image" src="https://github.com/user-attachments/assets/9c94055e-35aa-413e-ab55-7c53b71218e2" />
+
+
 ### Ator Principal
 Aluno
 
