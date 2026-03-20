@@ -40,6 +40,22 @@ Permitir que o usuário acesse o sistema de gestão da academia.
 ### RN Relacionadas
 - RN01 — Usuário não autenticado não pode acessar funções do sistema
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Inserir email e senha]
+B --> C[Validar credenciais]
+C --> D{Credenciais válidas?}
+D -->|Não| E{Motivo}
+E -->|Senha incorreta| F[Exibir erro]
+E -->|Conta bloqueada| G[Informar bloqueio]
+F --> B
+G --> H[Fim]
+D -->|Sim| I[Autenticar usuário]
+I --> J[Tela inicial]
+J --> H
+```
+
 ---
 
 ## UC02 — Realizar Matrícula
@@ -77,6 +93,20 @@ Cadastrar um novo aluno no sistema da academia.
 ### RN Relacionadas
 - RN02 — Matrículas duplicadas não são permitidas
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Inserir dados do aluno]
+B --> C[Validar dados]
+C --> D{Dados completos?}
+D -->|Não| E[Solicitar correção]
+E --> B
+D -->|Sim| F{Já cadastrado?}
+F -->|Sim| G[Exibir alerta de duplicidade]
+F -->|Não| H[Registrar matrícula]
+G --> I[Fim]
+H --> I
+```
 ---
 
 ## UC03 — Registrar Pagamento
@@ -111,6 +141,19 @@ Registrar o pagamento da mensalidade do aluno.
 ### RN Relacionadas
 - RN03 — Pagamento não processado não deve atualizar saldo
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar aluno]
+B --> C[Informar pagamento]
+C --> D[Processar pagamento]
+D --> E{Aprovado?}
+E -->|Não| F[Exibir erro]
+F --> C
+E -->|Sim| G[Registrar pagamento]
+G --> H[Atualizar saldo]
+H --> I[Fim]
+```
 ---
 
 ## UC04 — Agendar Aula
@@ -145,6 +188,17 @@ Permitir que o aluno agende aulas de acordo com disponibilidade.
 ### RN Relacionadas
 - RN04 — Aula só pode ser agendada se houver vaga
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar aula]
+B --> C[Verificar disponibilidade]
+C --> D{Há vaga?}
+D -->|Não| E[Sugerir horários alternativos]
+E --> B
+D -->|Sim| F[Confirmar agendamento]
+F --> G[Fim]
+```
 ---
 
 ## UC05 — Registrar Presença
@@ -179,6 +233,18 @@ Registrar a presença do aluno em aulas.
 ### RN Relacionadas
 - RN05 — Presença só é válida se aluno estiver matriculado
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Aluno passa na catraca]
+B --> C[Validar acesso]
+C --> D{Leitura ok?}
+D -->|Não| E[Instrutor registra manualmente]
+E --> F[Fim]
+D -->|Sim| G[Registrar presença automática]
+G --> F
+```
+
 ---
 
 ## UC06 — Consultar Agenda de Aulas
@@ -212,6 +278,17 @@ Permitir consulta aos horários de aulas disponíveis.
 ### RN Relacionadas
 - RN06 — Agenda não deve mostrar aulas canceladas
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Acessar agenda]
+B --> C[Carregar aulas]
+C --> D{Há aulas disponíveis?}
+D -->|Não| E[Informar indisponibilidade]
+D -->|Sim| F[Exibir agenda]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC07 — Cancelar Agendamento
@@ -246,6 +323,18 @@ Permitir que aluno cancele uma aula previamente agendada.
 ### RN Relacionadas
 - RN07 — Aula só pode ser cancelada dentro do prazo permitido
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar aula]
+B --> C[Solicitar cancelamento]
+C --> D{Dentro do prazo?}
+D -->|Não| E[Negar cancelamento]
+E --> F[Fim]
+D -->|Sim| G[Cancelar agendamento]
+G --> H[Atualizar vagas]
+H --> F
+```
 ---
 
 ## UC08 — Consultar Saldo de Pagamento
@@ -279,6 +368,17 @@ Permitir que aluno verifique seu saldo de mensalidade.
 ### RN Relacionadas
 - RN08 — Saldo exibido só se aluno estiver ativo
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Acessar pagamentos]
+B --> C[Buscar saldo]
+C --> D{Sistema disponível?}
+D -->|Não| E[Informar erro]
+D -->|Sim| F[Exibir saldo]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC09 — Emitir Relatórios Financeiros
@@ -313,6 +413,17 @@ Gerar relatórios financeiros da academia.
 ### RN Relacionadas
 - RN09 — Relatório só exibe dados válidos e confirmados
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar relatório]
+B --> C[Gerar relatório]
+C --> D{Gerado com sucesso?}
+D -->|Não| E[Exibir erro]
+D -->|Sim| F[Disponibilizar download]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC10 — Emitir Relatórios de Presença
@@ -346,6 +457,18 @@ Gerar relatórios de presença de alunos em aulas.
 
 ### RN Relacionadas
 - RN10 — Relatório só inclui alunos matriculados
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar período]
+B --> C[Gerar relatório]
+C --> D{Dados completos?}
+D -->|Não| E[Alertar inconsistência]
+D -->|Sim| F[Exibir relatório]
+E --> G[Fim]
+F --> G
+```
 
 ---
 
@@ -381,6 +504,17 @@ Controlar entrada do aluno na academia.
 ### RN Relacionadas
 - RN11 — Apenas alunos ativos têm acesso permitido
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Ler cartão RFID]
+B --> C[Validar aluno]
+C --> D{Cartão válido?}
+D -->|Não| E[Bloquear acesso]
+D -->|Sim| F[Liberar entrada]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC12 — Bloquear Acesso
@@ -414,6 +548,17 @@ Bloquear acesso de alunos com pendências.
 ### RN Relacionadas
 - RN12 — Aluno com pendência não pode acessar
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar aluno]
+B --> C[Bloquear acesso]
+C --> D{Sucesso?}
+D -->|Não| E[Erro de conexão]
+D -->|Sim| F[Acesso bloqueado]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC13 — Reativar Matrícula
@@ -448,6 +593,17 @@ Reativar matrícula suspensa ou cancelada.
 ### RN Relacionadas
 - RN13 — Aluno só é reativado se estiver regular
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar aluno]
+B --> C[Solicitar reativação]
+C --> D{Aluno regular?}
+D -->|Não| E[Negar reativação]
+D -->|Sim| F[Reativar matrícula]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC14 — Cancelar Matrícula
@@ -481,6 +637,18 @@ Cancelar matrícula de aluno.
 ### RN Relacionadas
 - RN14 — Aluno não pode acessar após cancelamento
 
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Solicitar cancelamento]
+B --> C{Pagamento pendente?}
+C -->|Sim| D[Negar cancelamento]
+C -->|Não| E[Cancelar matrícula]
+E --> F[Revogar acesso]
+D --> G[Fim]
+F --> G
+```
 ---
 
 ## UC15 — Atualizar Dados do Aluno
@@ -513,6 +681,18 @@ Atualizar informações pessoais do aluno.
 
 ### RN Relacionadas
 - RN15 — Alterações só são válidas se o aluno estiver ativo
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Editar dados]
+B --> C[Validar dados]
+C --> D{Dados válidos?}
+D -->|Não| E[Solicitar correção]
+D -->|Sim| F[Salvar alterações]
+E --> G[Fim]
+F --> G
+```
 
 ---
 
@@ -547,6 +727,18 @@ Enviar avisos sobre aulas ou pagamentos.
 ### RN Relacionadas
 - RN16 — Notificação só é enviada para alunos ativos
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar destinatários]
+B --> C[Enviar notificação]
+C --> D{Envio bem-sucedido?}
+D -->|Não| E[Tentar novamente]
+D -->|Sim| F[Confirmar envio]
+E --> G[Fim]
+F --> G
+```
+
 ---
 
 ## UC17 — Consultar Histórico de Presença
@@ -579,6 +771,21 @@ Permitir consulta de presença em aulas anteriores.
 
 ### RN Relacionadas
 - RN17 — Apenas alunos ativos têm histórico visível
+
+### Fluxos Alternativos
+- A1 — Sem registros  
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Acessar histórico]
+B --> C[Buscar registros]
+C --> D{Há dados?}
+D -->|Não| E[Informar ausência]
+D -->|Sim| F[Exibir histórico]
+E --> G[Fim]
+F --> G
+```
 
 ---
 
@@ -614,6 +821,19 @@ Fornecer visão gerencial das atividades da academia.
 ### RN Relacionadas
 - RN18 — Relatórios só incluem dados válidos
 
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Selecionar relatório]
+B --> C[Gerar relatório]
+C --> D{Dados válidos?}
+D -->|Não| E[Informar erro]
+D -->|Sim| F[Exibir relatório]
+E --> G[Fim]
+F --> G
+```
+
 ---
 
 ## UC19 — Recuperar Senha
@@ -648,6 +868,17 @@ Permitir recuperação de senha em caso de esquecimento.
 ### RN Relacionadas
 - RN19 — Usuário só consegue redefinir senha se e-mail estiver ativo
 
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Solicitar recuperação]
+B --> C[Enviar email]
+C --> D{Email válido?}
+D -->|Não| E[Exibir erro]
+D -->|Sim| F[Redefinir senha]
+E --> G[Fim]
+F --> G
+```
 ---
 
 ## UC20 — Encerrar Sessão
@@ -679,4 +910,16 @@ Permitir que o usuário saia do sistema com segurança.
 - RNF20 — Sistema deve encerrar sessão em até 2 segundos
 
 ### RN Relacionadas
-- RN20 — Sessão encerrada não permite mais acesso até novo login    itor
+- RN20 — Sessão encerrada não permite mais acesso até novo login    
+
+### Diagrama de Atividade
+```mermaid
+flowchart TD
+A[Início] --> B[Clicar sair]
+B --> C[Encerrar sessão]
+C --> D{Encerrado com sucesso?}
+D -->|Não| E[Tentar novamente]
+D -->|Sim| F[Redirecionar login]
+E --> G[Fim]
+F --> G
+```
