@@ -82,6 +82,8 @@ Cadastrar novos alunos no sistema.
 
 ## UC03 — Gerenciar Planos
 
+<img width="547" height="536" alt="image" src="https://github.com/user-attachments/assets/e0c4489e-c29f-4e99-bf57-489a30451371" />
+
 ### Ator Principal
 Gerente
 
