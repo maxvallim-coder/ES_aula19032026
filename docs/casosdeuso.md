@@ -294,6 +294,9 @@ Cancelar aula agendada.
 
 ## UC09 — Registrar Presença
 
+<img width="421" height="554" alt="image" src="https://github.com/user-attachments/assets/38edef66-739b-4d78-a063-eb326a1b3b2f" />
+
+
 ### Ator Principal
 Instrutor
 
