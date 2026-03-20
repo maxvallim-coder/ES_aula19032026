@@ -346,6 +346,9 @@ Registrar dados físicos do aluno.
 
 ## UC11 — Emitir Relatórios
 
+<img width="264" height="282" alt="image" src="https://github.com/user-attachments/assets/8a981836-af9e-4da3-927c-01b967fc8ae4" />
+
+
 ### Ator Principal
 Gerente
 
