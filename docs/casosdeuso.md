@@ -679,6 +679,9 @@ Atualizar situação automaticamente.
 
 ## UC20 — Integrar com Catraca
 
+<img width="372" height="525" alt="image" src="https://github.com/user-attachments/assets/295d40bb-d2ae-4803-b833-a4bf09a8c888" />
+
+
 ### Ator Principal
 Sistema
 
