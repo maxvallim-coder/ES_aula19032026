@@ -6,6 +6,9 @@
 
 ## UC01 — Realizar Login
 
+<img width="509" height="325" alt="image" src="https://github.com/user-attachments/assets/9f9040fd-fb5f-4b28-b32f-70b5f0a445c0" />
+
+
 ### Ator Principal
 Usuário
 
