@@ -466,6 +466,9 @@ Atualizar dados pessoais.
 
 ## UC14 — Consultar Planos
 
+<img width="293" height="282" alt="image" src="https://github.com/user-attachments/assets/bf33317d-df4a-4639-871d-8c852f88466b" />
+
+
 ### Ator Principal
 Aluno
 
