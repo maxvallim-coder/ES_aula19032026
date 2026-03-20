@@ -259,6 +259,9 @@ Reservar vaga em aula.
 
 ## UC08 — Cancelar Agendamento
 
+<img width="462" height="554" alt="image" src="https://github.com/user-attachments/assets/04ea0ea8-a23c-4306-a90a-ee1193ac1bc9" />
+
+
 ### Ator Principal
 Aluno
 
