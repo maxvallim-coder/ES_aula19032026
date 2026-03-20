@@ -1,4 +1,7 @@
 # Casos de Uso – Sistema FitPass Gym Management
+<img width="427" height="856" alt="image" src="https://github.com/user-attachments/assets/aa36c995-484e-4ef5-bf26-52141728aafd" />
+
+
 
 ## UC01 — Realizar Login
 
