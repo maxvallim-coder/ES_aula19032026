@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor "Aluno" as aluno
+
+rectangle "Sistema da Academia" {
+  usecase "UC11 — Cancelar Agendamento de Aula" as UC11
+}
+
+aluno --> UC11
+@enduml

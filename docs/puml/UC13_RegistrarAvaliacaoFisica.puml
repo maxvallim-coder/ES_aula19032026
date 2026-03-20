@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Instrutor" as inst
+actor "Aluno" as aluno
+
+rectangle "Sistema da Academia" {
+  usecase "UC13 — Registrar Avaliação Física" as UC13
+}
+
+inst --> UC13
+UC13 ..> aluno : "Notifica"
+@enduml

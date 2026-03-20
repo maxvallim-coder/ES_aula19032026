@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Sistema (Tempo/Batch)" <<Sistema>> as sys
+actor "Aluno" as aluno
+
+rectangle "Sistema da Academia" {
+  usecase "UC19 — Enviar Notificação de Vencimento" as UC19
+}
+
+sys --> UC19
+UC19 ..> aluno : "Envia E-mail/Push"
+@enduml

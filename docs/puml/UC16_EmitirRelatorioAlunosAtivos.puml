@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor "Gerente" as ger
+
+rectangle "Sistema da Academia" {
+  usecase "UC16 — Emitir Relatório de Alunos Ativos" as UC16
+}
+
+ger --> UC16
+@enduml

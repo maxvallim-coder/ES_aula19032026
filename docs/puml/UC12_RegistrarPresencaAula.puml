@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor "Instrutor" as inst
+
+rectangle "Sistema da Academia" {
+  usecase "UC12 — Registrar Presença em Aula" as UC12
+}
+
+inst --> UC12
+@enduml
