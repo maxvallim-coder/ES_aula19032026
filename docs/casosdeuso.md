@@ -609,6 +609,9 @@ Controlar acessos.
 
 ## UC18 — Visualizar Agenda
 
+<img width="346" height="450" alt="image" src="https://github.com/user-attachments/assets/10ed75ce-644f-4270-8c7b-8ba71c383395" />
+
+
 ### Ator Principal
 Aluno
 
