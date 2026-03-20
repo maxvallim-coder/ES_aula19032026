@@ -223,6 +223,9 @@ Controlar entrada do aluno.
 
 ## UC07 — Agendar Aula
 
+<img width="453" height="615" alt="image" src="https://github.com/user-attachments/assets/3ec49778-e997-42fa-9c81-5ac424f8c281" />
+
+
 ### Ator Principal
 Aluno
 
