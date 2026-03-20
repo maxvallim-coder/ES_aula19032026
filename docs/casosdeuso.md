@@ -504,6 +504,9 @@ Visualizar planos disponíveis.
 
 ## UC15 — Gerar Boleto
 
+<img width="309" height="671" alt="image" src="https://github.com/user-attachments/assets/e375f081-a3d2-4ce5-a934-97470b2af05d" />
+
+
 ### Ator Principal
 Sistema
 
