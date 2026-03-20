@@ -384,6 +384,9 @@ Gerar relatórios gerenciais.
 
 ## UC12 — Enviar Notificação
 
+<img width="553" height="917" alt="image" src="https://github.com/user-attachments/assets/04cbe5cc-624a-4854-98f7-69ab9a164b4f" />
+
+
 ### Ator Principal
 Sistema
 
