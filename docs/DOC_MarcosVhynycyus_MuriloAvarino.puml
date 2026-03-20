@@ -1,0 +1,307 @@
+@startuml
+title FitPass - Diagrama consolidado dos Casos de Uso
+
+skinparam shadowing false
+skinparam activity {
+  BorderColor #333333
+  DiamondBorderColor #333333
+  ArrowColor #333333
+}
+
+partition "UC01 - Cadastrar Aluno" {
+  start
+  :Recepcionista acessa modulo de alunos;
+  :Recepcionista seleciona "Cadastrar aluno";
+  :Recepcionista informa dados do aluno e plano;
+  :Sistema valida dados informados;
+
+  if (Dados validos?) then (sim)
+    :Sistema registra aluno;
+    :Recepcionista visualiza confirmacao do cadastro;
+  else (nao)
+    :Sistema exibe inconsistencias;
+    :Recepcionista corrige dados e reenvia;
+  endif
+
+  stop
+}
+
+partition "UC02 - Gerenciar Planos" {
+  start
+  :Gerente acessa modulo de planos;
+  :Gerente escolhe criar, editar,\nativar ou desativar plano;
+  :Gerente informa dados do plano;
+  :Sistema valida informacoes;
+
+  if (Dados validos?) then (sim)
+    :Sistema salva alteracoes do plano;
+    :Gerente confirma operacao;
+  else (nao)
+    :Sistema informa erro de validacao;
+    :Gerente corrige dados do plano;
+  endif
+
+  stop
+}
+
+partition "UC03 - Registrar Pagamento" {
+  start
+  :Recepcionista busca aluno;
+  :Recepcionista seleciona "Registrar pagamento";
+  :Recepcionista informa forma de pagamento e valor;
+  :Sistema valida dados do pagamento;
+
+  if (Valor integral?) then (sim)
+    :Sistema registra pagamento;
+    :Sistema atualiza regularidade do aluno;
+    :Recepcionista visualiza confirmacao do registro;
+  else (nao)
+    :Sistema informa que pagamento parcial\nnao e permitido;
+    :Recepcionista corrige valor informado;
+  endif
+
+  stop
+}
+
+partition "UC04 - Verificar Regularidade do Aluno" {
+  start
+  :Sistema localiza cadastro do aluno;
+  :Sistema consulta vencimento da mensalidade;
+  :Sistema consulta pagamentos registrados;
+
+  if (Mensalidade vencida ha mais de 5 dias?) then (sim)
+    :Sistema define aluno como irregular;
+  else (nao)
+    :Sistema define aluno como regular;
+  endif
+
+  stop
+}
+
+partition "UC05 - Validar Acesso na Catraca" {
+  start
+  :Aluno aproxima RFID da catraca;
+  :Sistema de Catraca le identificacao do aluno;
+  :Sistema de Catraca envia requisicao\npara API do FitPass;
+  :Sistema FitPass verifica regularidade do aluno;
+
+  if (Aluno regular?) then (sim)
+    :Sistema FitPass retorna autorizacao de acesso;
+    fork
+      :Sistema de Catraca libera entrada;
+    fork again
+      :Sistema FitPass registra acesso no historico;
+    end fork
+  else (nao)
+    :Sistema FitPass retorna bloqueio de acesso;
+    :Sistema de Catraca mantem catraca bloqueada;
+  endif
+
+  stop
+}
+
+partition "UC06 - Consultar Horarios de Aula" {
+  start
+  :Aluno acessa agenda de aulas;
+  :Sistema consulta aulas disponiveis;
+  :Sistema exibe horarios,\ninstrutores e disponibilidade;
+  :Aluno visualiza opcoes de aula;
+  stop
+}
+
+partition "UC07 - Agendar Aula" {
+  start
+  :Aluno acessa agenda;
+  :Aluno seleciona aula desejada;
+  :Sistema verifica disponibilidade de vagas;
+
+  if (Ha vagas?) then (sim)
+    :Sistema registra reserva do aluno;
+    fork
+      :Sistema atualiza ocupacao da aula;
+    fork again
+      :Sistema envia confirmacao de agendamento;
+    end fork
+    :Aluno visualiza confirmacao da reserva;
+  else (nao)
+    :Sistema informa aula lotada;
+    :Aluno escolhe outra aula;
+  endif
+
+  stop
+}
+
+partition "UC08 - Cancelar Agendamento" {
+  start
+  :Aluno acessa reservas;
+  :Aluno seleciona reserva para cancelamento;
+  :Sistema valida prazo para cancelar;
+
+  if (Faltam pelo menos 1 hora?) then (sim)
+    :Sistema cancela reserva;
+    :Sistema libera vaga da aula;
+    :Aluno visualiza confirmacao do cancelamento;
+  else (nao)
+    :Sistema informa prazo excedido;
+    :Aluno mantem reserva atual;
+  endif
+
+  stop
+}
+
+partition "UC09 - Registrar Presenca em Aula" {
+  start
+  :Instrutor acessa aula;
+  :Sistema exibe lista de alunos agendados;
+  :Instrutor marca presenca dos alunos;
+  :Sistema salva registro de presenca;
+  stop
+}
+
+partition "UC10 - Registrar Avaliacao Fisica" {
+  start
+  :Instrutor seleciona aluno;
+  :Sistema verifica regularidade do aluno;
+
+  if (Aluno ativo e regular?) then (sim)
+    :Instrutor informa dados da avaliacao fisica;
+    :Sistema valida e salva avaliacao;
+    :Sistema envia notificacao de nova avaliacao;
+    :Instrutor visualiza confirmacao;
+  else (nao)
+    :Sistema informa impedimento para avaliacao;
+    :Instrutor encerra processo;
+  endif
+
+  stop
+}
+
+partition "UC11 - Anexar Arquivo de Avaliacao" {
+  start
+  :Instrutor acessa avaliacao fisica;
+  :Instrutor seleciona "Anexar arquivo";
+  :Instrutor escolhe arquivo;
+  :Sistema recebe upload do arquivo;
+
+  if (Upload realizado?) then (sim)
+    :Sistema armazena arquivo com seguranca;
+    :Sistema vincula arquivo a avaliacao;
+    :Instrutor visualiza confirmacao do anexo;
+  else (nao)
+    :Sistema informa falha no envio;
+    :Instrutor tenta novo envio;
+  endif
+
+  stop
+}
+
+partition "UC12 - Emitir Relatorio de Inadimplencia" {
+  start
+  :Gerente acessa relatorios;
+  :Gerente seleciona relatorio de inadimplencia;
+  :Sistema consulta alunos irregulares;
+  :Sistema gera relatorio;
+  :Sistema exibe resultado;
+  :Gerente analisa relatorio;
+  stop
+}
+
+partition "UC13 - Emitir Relatorio de Alunos Ativos" {
+  start
+  :Gerente acessa relatorios;
+  :Gerente seleciona relatorio de alunos ativos;
+  :Sistema consulta alunos ativos;
+  :Sistema gera relatorio;
+  :Sistema exibe resultado;
+  :Gerente analisa relatorio;
+  stop
+}
+
+partition "UC14 - Emitir Relatorio de Acessos" {
+  start
+  :Gerente acessa relatorios;
+  :Gerente seleciona relatorio de acessos;
+  :Sistema consulta historico de acessos;
+  :Sistema gera relatorio;
+  :Sistema exibe resultado;
+  :Gerente analisa relatorio;
+  stop
+}
+
+partition "UC15 - Emitir Relatorio de Ocupacao de Aulas" {
+  start
+  :Gerente acessa relatorios;
+  :Gerente seleciona relatorio de ocupacao;
+  :Gerente informa periodo;
+  :Sistema valida periodo informado;
+
+  if (Periodo valido?) then (sim)
+    :Sistema consulta ocupacao das aulas;
+    :Sistema gera relatorio;
+    :Sistema exibe resultado;
+    :Gerente analisa relatorio;
+  else (nao)
+    :Sistema informa periodo invalido;
+    :Gerente corrige periodo;
+  endif
+
+  stop
+}
+
+partition "UC16 - Enviar Notificacao de Vencimento" {
+  start
+  :Sistema identifica mensalidades\nproximas do vencimento;
+
+  if (Ha alunos elegiveis?) then (sim)
+    :Sistema monta mensagem de vencimento;
+    :Sistema envia notificacao ao aluno;
+  else (nao)
+    :Sistema encerra processo sem envio;
+  endif
+
+  stop
+}
+
+partition "UC17 - Enviar Confirmacao de Agendamento" {
+  start
+  :Sistema recebe evento de reserva confirmada;
+  :Sistema monta confirmacao de agendamento;
+  :Sistema envia notificacao ao aluno;
+  stop
+}
+
+partition "UC18 - Notificar Nova Avaliacao Fisica" {
+  start
+  :Sistema detecta nova avaliacao fisica registrada;
+  :Sistema monta mensagem de notificacao;
+  :Sistema envia notificacao ao aluno;
+  stop
+}
+
+partition "UC19 - Atualizar Regularidade" {
+  start
+  :Sistema recebe confirmacao do pagamento;
+  :Sistema consulta situacao atual do aluno;
+  :Sistema atualiza regularidade;
+  :Sistema disponibiliza situacao atualizada;
+  stop
+}
+
+partition "UC20 - Autenticar Usuario" {
+  start
+  :Usuario interno informa login e senha;
+  :Sistema valida credenciais;
+
+  if (Credenciais validas?) then (sim)
+    :Sistema identifica perfil do usuario;
+    :Sistema aplica permissoes do perfil;
+    :Usuario interno acessa modulos autorizados;
+  else (nao)
+    :Sistema exibe erro de autenticacao;
+    :Usuario interno tenta novo login;
+  endif
+
+  stop
+}
+
+@enduml
