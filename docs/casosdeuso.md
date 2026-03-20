@@ -329,6 +329,9 @@ Registrar presença dos alunos.
 
 ## UC10 — Registrar Avaliação Física
 
+<img width="415" height="554" alt="image" src="https://github.com/user-attachments/assets/3642b70a-7ca0-42ca-bbc9-4c577b3eb6e3" />
+
+
 ### Ator Principal
 Instrutor
 
