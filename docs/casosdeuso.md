@@ -644,6 +644,9 @@ Ver aulas disponíveis.
 
 ## UC19 — Atualizar Status do Aluno
 
+<img width="393" height="671" alt="image" src="https://github.com/user-attachments/assets/c4325074-99e0-460b-a857-3c9d007e6b16" />
+
+
 ### Ator Principal
 Sistema
 
