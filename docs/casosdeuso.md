@@ -1,4 +1,6 @@
-## UC01 — Realizar Login (UC EXEMPLO - FAZER DESSA FORMA PARA TODOS OS CASOS DE USO, NESSE MESMO DOCUMENTO)
+# Casos de Uso – Sistema FitPass Gym Management
+
+## UC01 — Realizar Login
 
 ### Ator Principal
 Usuário
@@ -22,13 +24,627 @@ Permitir que o usuário acesse o sistema.
   O sistema exibe mensagem de erro.
 
 - **A2 — Conta bloqueada:**  
-  O sistema impede o login e instrui o usuário a recuperar o acesso.
+  O sistema impede o login.
 
 ### RF Relacionados
-- (inserir RF aqui)
+- RF01
 
 ### RNF Relacionados
-- (inserir RNF aqui)
+- RNF02
 
 ### RN Relacionadas
-- (inserir RN aqui)
+- RN06
+
+
+## UC02 — Cadastrar Aluno
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Cadastrar novos alunos no sistema.
+
+### Pré-condições
+- Usuário deve estar logado.
+
+### Pós-condições
+- Aluno cadastrado com sucesso.
+
+### Fluxo Principal
+1. O recepcionista acessa a tela de cadastro.
+2. Preenche os dados do aluno.
+3. O sistema valida os dados.
+4. O sistema salva o cadastro.
+
+### Fluxos Alternativos
+- **A1 — Dados inválidos:**  
+  O sistema solicita correção.
+
+### RF Relacionados
+- RF01
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
+## UC03 — Gerenciar Planos
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Criar e gerenciar planos da academia.
+
+### Pré-condições
+- Usuário autenticado como gerente.
+
+### Pós-condições
+- Plano atualizado no sistema.
+
+### Fluxo Principal
+1. O gerente acessa a área de planos.
+2. Cria ou edita um plano.
+3. Salva as alterações.
+
+### Fluxos Alternativos
+- **A1 — Dados inválidos:**  
+  O sistema exibe erro.
+
+### RF Relacionados
+- RF02
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
+## UC04 — Registrar Pagamento
+
+### Ator Principal
+Recepcionista
+
+### Objetivo
+Registrar pagamento do aluno.
+
+### Pré-condições
+- Aluno cadastrado.
+
+### Pós-condições
+- Pagamento registrado e status atualizado.
+
+### Fluxo Principal
+1. O recepcionista seleciona o aluno.
+2. Informa o método de pagamento.
+3. Confirma a operação.
+
+### Fluxos Alternativos
+- **A1 — Pagamento parcial:**  
+  O sistema bloqueia operação.
+
+### RF Relacionados
+- RF03
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN04, RN07
+
+
+## UC05 — Verificar Regularidade
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Verificar se o aluno está em dia.
+
+### Pré-condições
+- Aluno cadastrado.
+
+### Pós-condições
+- Status atualizado.
+
+### Fluxo Principal
+1. O sistema verifica data de pagamento.
+2. Define status do aluno.
+
+### Fluxos Alternativos
+- **A1 — Inadimplente:**  
+  Sistema marca como irregular.
+
+### RF Relacionados
+- RF04
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN01
+
+
+## UC06 — Validar Acesso na Catraca
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Controlar entrada do aluno.
+
+### Pré-condições
+- Aluno com RFID.
+
+### Pós-condições
+- Acesso liberado ou negado.
+
+### Fluxo Principal
+1. Aluno aproxima RFID.
+2. Sistema valida status.
+3. Libera entrada.
+
+### Fluxos Alternativos
+- **A1 — Inadimplente:**  
+  Acesso negado.
+
+### RF Relacionados
+- RF05
+
+### RNF Relacionados
+- RNF06
+
+### RN Relacionadas
+- RN01
+
+
+## UC07 — Agendar Aula
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Reservar vaga em aula.
+
+### Pré-condições
+- Aluno ativo.
+
+### Pós-condições
+- Aula agendada.
+
+### Fluxo Principal
+1. Aluno visualiza horários.
+2. Seleciona aula.
+3. Confirma reserva.
+
+### Fluxos Alternativos
+- **A1 — Lotação máxima:**  
+  Sistema bloqueia.
+
+### RF Relacionados
+- RF06
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN02
+
+
+## UC08 — Cancelar Agendamento
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Cancelar aula agendada.
+
+### Pré-condições
+- Aula previamente agendada.
+
+### Pós-condições
+- Vaga liberada.
+
+### Fluxo Principal
+1. Aluno acessa agendamentos.
+2. Cancela aula.
+
+### Fluxos Alternativos
+- **A1 — Fora do prazo:**  
+  Sistema impede cancelamento.
+
+### RF Relacionados
+- RF06
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN03
+
+
+## UC09 — Registrar Presença
+
+### Ator Principal
+Instrutor
+
+### Objetivo
+Registrar presença dos alunos.
+
+### Pré-condições
+- Aula em andamento.
+
+### Pós-condições
+- Presença registrada.
+
+### Fluxo Principal
+1. Instrutor acessa lista.
+2. Marca presença.
+
+### Fluxos Alternativos
+- **A1 — Aluno não listado:**  
+  Sistema bloqueia.
+
+### RF Relacionados
+- RF07
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN06
+
+
+## UC10 — Registrar Avaliação Física
+
+### Ator Principal
+Instrutor
+
+### Objetivo
+Registrar dados físicos do aluno.
+
+### Pré-condições
+- Aluno ativo.
+
+### Pós-condições
+- Avaliação salva.
+
+### Fluxo Principal
+1. Instrutor insere dados.
+2. Salva avaliação.
+
+### Fluxos Alternativos
+- **A1 — Aluno irregular:**  
+  Sistema bloqueia.
+
+### RF Relacionados
+- RF08
+
+### RNF Relacionados
+- RNF02
+
+### RN Relacionadas
+- RN05
+
+
+## UC11 — Emitir Relatórios
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Gerar relatórios gerenciais.
+
+### Pré-condições
+- Dados disponíveis.
+
+### Pós-condições
+- Relatório exibido.
+
+### Fluxo Principal
+1. Seleciona tipo de relatório.
+2. Sistema gera resultado.
+
+### Fluxos Alternativos
+- **A1 — Sem dados:**  
+  Exibe mensagem.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- RNF05
+
+### RN Relacionadas
+- RN06
+
+
+## UC12 — Enviar Notificação
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Notificar aluno.
+
+### Pré-condições
+- Evento disparado.
+
+### Pós-condições
+- Notificação enviada.
+
+### Fluxo Principal
+1. Sistema identifica evento.
+2. Envia mensagem.
+
+### Fluxos Alternativos
+- **A1 — Falha envio:**  
+  Reenvio automático.
+
+### RF Relacionados
+- RF10
+
+### RNF Relacionados
+- RNF01
+
+### RN Relacionadas
+- RN07
+
+
+## UC13 — Atualizar Cadastro
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Atualizar dados pessoais.
+
+### Pré-condições
+- Login realizado.
+
+### Pós-condições
+- Dados atualizados.
+
+### Fluxo Principal
+1. Edita informações.
+2. Salva alterações.
+
+### Fluxos Alternativos
+- **A1 — Dados inválidos:**  
+  Solicita correção.
+
+### RF Relacionados
+- RF01
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
+## UC14 — Consultar Planos
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Visualizar planos disponíveis.
+
+### Pré-condições
+- Sistema ativo.
+
+### Pós-condições
+- Lista exibida.
+
+### Fluxo Principal
+1. Acessa área de planos.
+2. Visualiza opções.
+
+### Fluxos Alternativos
+- **A1 — Nenhum plano:**  
+  Exibe mensagem.
+
+### RF Relacionados
+- RF02
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN06
+
+
+## UC15 — Gerar Boleto
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Gerar cobrança.
+
+### Pré-condições
+- Mensalidade ativa.
+
+### Pós-condições
+- Boleto gerado.
+
+### Fluxo Principal
+1. Sistema cria cobrança.
+2. Disponibiliza ao aluno.
+
+### Fluxos Alternativos
+- **A1 — Falha:**  
+  Reprocessa.
+
+### RF Relacionados
+- RF03
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN04
+
+
+## UC16 — Consultar Histórico
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Ver histórico de acessos.
+
+### Pré-condições
+- Login ativo.
+
+### Pós-condições
+- Dados exibidos.
+
+### Fluxo Principal
+1. Acessa histórico.
+2. Visualiza dados.
+
+### Fluxos Alternativos
+- **A1 — Sem histórico:**  
+  Exibe mensagem.
+
+### RF Relacionados
+- RF09
+
+### RNF Relacionados
+- RNF05
+
+### RN Relacionadas
+- RN06
+
+
+## UC17 — Gerenciar Permissões
+
+### Ator Principal
+Gerente
+
+### Objetivo
+Controlar acessos.
+
+### Pré-condições
+- Perfil gerente.
+
+### Pós-condições
+- Permissões atualizadas.
+
+### Fluxo Principal
+1. Seleciona usuário.
+2. Define permissões.
+
+### Fluxos Alternativos
+- **A1 — Perfil inválido:**  
+  Exibe erro.
+
+### RF Relacionados
+- RF01
+
+### RNF Relacionados
+- RNF02
+
+### RN Relacionadas
+- RN06
+
+
+## UC18 — Visualizar Agenda
+
+### Ator Principal
+Aluno
+
+### Objetivo
+Ver aulas disponíveis.
+
+### Pré-condições
+- Sistema ativo.
+
+### Pós-condições
+- Agenda exibida.
+
+### Fluxo Principal
+1. Acessa agenda.
+2. Visualiza horários.
+
+### Fluxos Alternativos
+- **A1 — Sem aulas:**  
+  Exibe aviso.
+
+### RF Relacionados
+- RF06
+
+### RNF Relacionados
+- RNF04
+
+### RN Relacionadas
+- RN02
+
+
+## UC19 — Atualizar Status do Aluno
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Atualizar situação automaticamente.
+
+### Pré-condições
+- Pagamento registrado.
+
+### Pós-condições
+- Status atualizado.
+
+### Fluxo Principal
+1. Detecta pagamento.
+2. Atualiza status.
+
+### Fluxos Alternativos
+- **A1 — Falha:**  
+  Reprocessa.
+
+### RF Relacionados
+- RF04
+
+### RNF Relacionados
+- RNF03
+
+### RN Relacionadas
+- RN07
+
+
+## UC20 — Integrar com Catraca
+
+### Ator Principal
+Sistema
+
+### Objetivo
+Comunicar com hardware.
+
+### Pré-condições
+- API ativa.
+
+### Pós-condições
+- Comunicação realizada.
+
+### Fluxo Principal
+1. Sistema envia requisição.
+2. Recebe resposta.
+
+### Fluxos Alternativos
+- **A1 — Falha comunicação:**  
+  Sistema tenta novamente.
+
+### RF Relacionados
+- RF05
+
+### RNF Relacionados
+- RNF06
+
+### RN Relacionadas
+- RN01
