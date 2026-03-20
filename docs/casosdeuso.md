@@ -187,6 +187,9 @@ Verificar se o aluno está em dia.
 
 ## UC06 — Validar Acesso na Catraca
 
+<img width="320" height="450" alt="image" src="https://github.com/user-attachments/assets/ca5183d2-cd85-42ef-9abb-9ed87fa0632f" />
+
+
 ### Ator Principal
 Sistema
 
