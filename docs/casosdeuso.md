@@ -152,6 +152,9 @@ Registrar pagamento do aluno.
 
 ## UC05 — Verificar Regularidade
 
+<img width="445" height="227" alt="image" src="https://github.com/user-attachments/assets/71d7c2f5-8dd6-4755-9809-a4b102480131" />
+
+
 ### Ator Principal
 Sistema
 
