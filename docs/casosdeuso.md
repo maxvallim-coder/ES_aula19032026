@@ -574,6 +574,9 @@ Ver histórico de acessos.
 
 ## UC17 — Gerenciar Permissões
 
+<img width="485" height="554" alt="image" src="https://github.com/user-attachments/assets/b0f9ca4d-ee52-42c5-ad03-dcb9adfa693f" />
+
+
 ### Ator Principal
 Gerente
 
