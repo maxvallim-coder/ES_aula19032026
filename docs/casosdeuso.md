@@ -117,6 +117,8 @@ Criar e gerenciar planos da academia.
 
 ## UC04 — Registrar Pagamento
 
+<img width="401" height="447" alt="image" src="https://github.com/user-attachments/assets/16ba4869-284b-4e1d-afd4-3eb252218d5f" />
+
 ### Ator Principal
 Recepcionista
 
