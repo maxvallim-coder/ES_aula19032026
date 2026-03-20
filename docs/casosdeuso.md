@@ -45,6 +45,8 @@ Permitir que o usuário acesse o sistema.
 
 ## UC02 — Cadastrar Aluno
 
+<img width="613" height="386" alt="image" src="https://github.com/user-attachments/assets/9e66021f-a333-45e0-ab67-7080d58fb1c1" />
+
 ### Ator Principal
 Recepcionista
 
