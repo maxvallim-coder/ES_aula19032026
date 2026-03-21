@@ -636,7 +636,8 @@ Interromper o acesso de um aluno por motivos administrativos (ex: trancamento).
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de Atividade
+<img width="245" height="422" alt="image" src="https://github.com/user-attachments/assets/574c54a5-fbe7-4330-8bc1-0349526615f5" />
 
 ## UC19 — Notificar Confirmação de Agendamento
 
@@ -658,7 +659,8 @@ Confirmar ao aluno que sua vaga foi reservada com sucesso.
 ### RN Relacionadas
 - RN02
 
-
+### Diagrama de atividade
+<img width="452" height="389" alt="image" src="https://github.com/user-attachments/assets/9479d238-95fc-420a-b066-55b6db416796" />
 
 ## UC20 — Listar Alunos Ativos
 
@@ -680,6 +682,9 @@ Obter a contagem total de clientes matriculados com contrato vigente.
 
 ### RN Relacionadas
 - RN06
+
+### Diagrama de Atividade
+<img width="581" height="453" alt="image" src="https://github.com/user-attachments/assets/ac922e53-785b-4503-a7e3-b32e8816c92a" />
 
 
 
