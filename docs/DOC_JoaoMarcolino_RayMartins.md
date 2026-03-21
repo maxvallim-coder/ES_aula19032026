@@ -588,7 +588,8 @@ O sistema não consegue identificar o código da tag.
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de atividade
+<img width="222" height="547" alt="image" src="https://github.com/user-attachments/assets/f3661f53-ca77-49f5-ba5d-82fc35fc3125" />
 
 ## UC17 — Visualizar Evolução Física
 
@@ -611,7 +612,8 @@ Consultar os resultados das suas avaliações físicas.
 ### RN Relacionadas
 - N/A
 
-
+### Diagrama de atividade
+<img width="439" height="508" alt="image" src="https://github.com/user-attachments/assets/b33d54ea-397b-4fce-9d19-cbf424556b29" />
 
 ## UC18 — Ativar/Desativar Plano de Aluno
 
