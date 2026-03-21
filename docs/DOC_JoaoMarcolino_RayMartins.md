@@ -410,7 +410,8 @@ O sistema informa que a fatura já está quitada e impede a geração de nova co
 ### RN Relacionadas
 - RN04
 
-
+### Diagrama de atividade
+<img width="703" height="520" alt="image" src="https://github.com/user-attachments/assets/4189994b-d870-429a-9f26-95241a4c7c9b" />
 
 ## UC12 — Notificar Vencimento de Mensalidade
 
@@ -444,7 +445,8 @@ O sistema agenda uma nova tentativa de envio da notificação.
 ### RN Relacionadas
 - N/A
 
-
+### Diagrama de Atividade
+<img width="550" height="541" alt="image" src="https://github.com/user-attachments/assets/5a933469-ef8a-48d9-b1ff-c1cf5a041216" />
 
 ## UC13 — Consultar Histórico de Acessos
 
@@ -481,7 +483,8 @@ O sistema exibe uma mensagem informando que não há registros disponíveis.
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de Atividade
+<img width="376" height="477" alt="image" src="https://github.com/user-attachments/assets/721c4679-586c-4d83-9373-5a12e235eadc" />
 
 ## UC14 — Editar Cadastro de Aluno
 
@@ -514,7 +517,8 @@ O sistema exibe mensagem informando que o aluno não foi encontrado.
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de Atividade
+<img width="309" height="392" alt="image" src="https://github.com/user-attachments/assets/1169cec6-7655-44ca-9bae-be147f69a94c" />
 
 ## UC15 — Emitir Relatório de Ocupação de Aulas
 
@@ -548,7 +552,8 @@ O sistema informa que não há informações disponíveis e permite nova consult
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de Atividade
+<img width="508" height="453" alt="image" src="https://github.com/user-attachments/assets/93d5789d-405c-4206-9175-268a17eab419" />
 
 ## UC16 — Vincular Tag RFID ao Aluno
 
