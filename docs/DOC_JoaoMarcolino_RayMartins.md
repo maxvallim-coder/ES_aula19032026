@@ -122,7 +122,9 @@ O gerente seleciona um plano existente e marca como "Inativo".
 ### RN Relacionadas
 - RN06
 
+### Diagrama de Atividade
 
+<img width="261" height="422" alt="image" src="https://github.com/user-attachments/assets/f63f30c8-2302-4ed4-a52d-b4540da5a1ae" />
 
 ## UC04 — Registrar Pagamento na Recepção
 
@@ -157,7 +159,8 @@ O sistema bloqueia a operação informando que apenas valores integrais são ace
 ### RN Relacionadas
 - RN04, RN07
 
-
+### Diagrama de Atividade
+<img width="795" height="673" alt="image" src="https://github.com/user-attachments/assets/aecb6463-e687-489a-b7be-cb24df23b1a5" />
 
 ## UC05 — Validar Acesso na Catraca (RFID)
 
@@ -193,6 +196,8 @@ O sistema nega o acesso.
 ### RN Relacionadas
 - RN01
 
+### Diagrama de atividade
+<img width="739" height="587" alt="image" src="https://github.com/user-attachments/assets/c4585224-f697-4506-9b7f-bf3af4c90dd8" />
 
 
 ## UC06 — Agendar Aula
