@@ -49,7 +49,9 @@ Autenticar o usuário para acesso às funcionalidades do sistema de acordo com s
 ### RN Relacionadas
 - RN06
 
+### Diagrama de Atividade
 
+<img width="345" height="620" alt="image" src="https://github.com/user-attachments/assets/9c1c266b-77c2-44ca-ad03-4c1c53a4fb78" />
 
 ## UC02 — Cadastrar Novo Aluno
 
