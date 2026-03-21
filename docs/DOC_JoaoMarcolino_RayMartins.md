@@ -86,7 +86,9 @@ O sistema destaca os campos incorretos e solicita correção.
 ### RN Relacionadas
 - RN06
 
+### Diagrama de Atividade
 
+<img width="213" height="547" alt="image" src="https://github.com/user-attachments/assets/1b0e1ed6-b786-4cf6-8bcf-7abbc5b67ca8" />
 
 ## UC03 — Gerenciar Tipos de Planos
 
