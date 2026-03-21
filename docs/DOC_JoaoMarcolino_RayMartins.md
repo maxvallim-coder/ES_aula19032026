@@ -233,7 +233,8 @@ O sistema informa que não há mais vagas e bloqueia a reserva.
 ### RN Relacionadas
 - RN02
 
-
+### Diagrama de atividade
+<img width="688" height="587" alt="image" src="https://github.com/user-attachments/assets/86a6722f-a360-4c94-ae6d-abf5699e87b1" />
 
 ## UC07 — Cancelar Agendamento de Aula
 
@@ -268,6 +269,7 @@ Se faltar menos de 1 hora, o sistema impede o cancelamento.
 ### RN Relacionadas
 - RN03
 
+<img width="920" height="529" alt="image" src="https://github.com/user-attachments/assets/4d4ba37c-adb7-4c6a-af3e-2659db021c14" />
 
 
 ## UC08 — Registrar Lista de Presença
@@ -301,7 +303,9 @@ Se faltar menos de 1 hora, o sistema impede o cancelamento.
 
 ### RN Relacionadas
 - RN06
-
+- 
+### Diagrama de atividade
+<img width="722" height="481" alt="image" src="https://github.com/user-attachments/assets/63be994e-ff95-40a5-b136-9145388915e8" />
 
 
 ## UC09 — Registrar Avaliação Física
@@ -336,7 +340,8 @@ O sistema impede a abertura do formulário de avaliação.
 ### RN Relacionadas
 - RN05, RN06
 
-
+### Diagrama de atividade
+<img width="702" height="548" alt="image" src="https://github.com/user-attachments/assets/88a5f6c2-6708-4b2d-b2c5-1a1a18a2ae90" />
 
 ## UC10 — Emitir Relatório de Inadimplência
 
@@ -370,7 +375,8 @@ O sistema exibe mensagem informando que não há inadimplências no período sel
 ### RN Relacionadas
 - RN06
 
-
+### Diagrama de atividade
+<img width="353" height="422" alt="image" src="https://github.com/user-attachments/assets/99220f97-c6e7-4d5a-9b7c-3f38fc2c8e7a" />
 
 ## UC11 — Gerar Boleto/Cartão Online
 
