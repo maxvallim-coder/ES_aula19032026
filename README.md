@@ -10,7 +10,7 @@ Este repositório contém o estudo completo que servirá de base para a elabora�
 
 # Orientações Gerais
 
-Os alunos deverão utilizar o material desenvolvido na aula anterior e elaborar um documento ÚNICO, com o(s) diagrama(s) de xasos de uso, a documentação de cada caso de uso e os **diagramas de atividade** de cada caso de uso. Fica a critério dos alunos, elaborar diagramas de atividade adicionais, contemplando grupos de casos de uso.
+Os alunos deverão utilizar o material desenvolvido na aula anterior e elaborar um documento ÚNICO, com o(s) diagrama(s) de casos de uso, a documentação de cada caso de uso e os **diagramas de atividade** de cada caso de uso. Fica a critério dos alunos, elaborar diagramas de atividade adicionais, contemplando grupos de casos de uso.
 
 # Tarefa dos Alunos
 
