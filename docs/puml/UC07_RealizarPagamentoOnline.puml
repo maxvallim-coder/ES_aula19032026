@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Aluno" as aluno
+actor "Gateway de Pagamento" <<Sistema Externo>> as gateway
+
+rectangle "Sistema da Academia" {
+  usecase "UC07 — Realizar Pagamento Online" as UC07
+}
+
+aluno --> UC07
+UC07 --> gateway
+@enduml

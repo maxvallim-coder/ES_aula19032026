@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor "Recepcionista" as rec
+
+rectangle "Sistema da Academia" {
+  usecase "UC03 — Editar Dados do Aluno" as UC03
+}
+
+rec --> UC03
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Sistema de Catraca" <<Sistema>> as catraca
+actor "Aluno" as aluno
+
+rectangle "Sistema FitPass" {
+  usecase "UC08 — Validar Acesso via Catraca (RFID)" as UC08
+}
+
+aluno --> catraca : "Aproxima Tag/Biometria"
+catraca --> UC08 : "Envia ID via API"
+@enduml

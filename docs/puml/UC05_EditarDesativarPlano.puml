@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+actor "Gerente" as ger
+
+rectangle "Sistema da Academia" {
+  usecase "UC05 — Editar/Desativar Plano" as UC05
+}
+
+ger --> UC05
+@enduml

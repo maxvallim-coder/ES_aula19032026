@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Recepcionista" as rec
+actor "Aluno" as aluno
+
+rectangle "Sistema da Academia" {
+  usecase "UC06 — Registrar Pagamento Presencial" as UC06
+}
+
+rec --> UC06
+UC06 ..> aluno : "Refere-se a"
+@enduml

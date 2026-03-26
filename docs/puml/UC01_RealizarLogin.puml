@@ -1,0 +1,18 @@
+@startuml
+start
+:Usuário informa e-mail e senha;
+:Sistema valida credenciais e perfil;
+if (Credenciais corretas e conta ativa?) then (Sim)
+  :Sistema autentica usuário;
+  :Redireciona para tela inicial;
+else (Não)
+  if (Senha incorreta?) then (Sim)
+    :Exibe mensagem de erro (A1);
+    :Solicita nova tentativa;
+  else (Conta bloqueada/inativa)
+    :Impede o login (A2);
+    :Instrui contato com a recepção;
+  endif
+endif
+stop
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+
+actor "Sistema (Trigger Financeiro)" <<Sistema>> as sys
+actor "Sistema de Catraca" <<Sistema>> as catraca
+
+rectangle "Sistema da Academia" {
+  usecase "UC20 — Atualizar Status de Regularidade Automática" as UC20
+}
+
+sys --> UC20
+UC20 ..> catraca : "Reflete alteração na API"
+@enduml
